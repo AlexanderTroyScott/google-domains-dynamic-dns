@@ -1,0 +1,21 @@
+version: "3.7"
+
+secrets:
+  password:
+    file: "password"
+    name: "dynamic_dns_password-v0.0.01"
+  username:
+    file: username
+    name: "dynamic_dns_username-v0.0.01"
+    
+services:
+  dyndns:
+    image: dynamic_dns:latest
+    environment:
+      - HOSTNAME="jupyter.actuary.llc"
+      - TIME_SLEEP=3600
+    secrets:
+      - source: password
+        target: /run/secrets/password
+      - source: username
+        target: /run/secrets/username
