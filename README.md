@@ -1,3 +1,7 @@
+# Archived
+This repository was archived following SquareSoft's acquisition of google domains as detailed in [Google's FAQ](https://support.google.com/domains/answer/13689670?hl=en)
+
+
 # dynamic_dns
 Update google domains dns records.
 
